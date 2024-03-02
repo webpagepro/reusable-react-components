@@ -1,0 +1,120 @@
+@import '../../design-tokens/component.scss';
+
+/**
+ * A full page width banner for new pet page
+ * design - https://xd.adobe.com/view/08948972-5e2f-40f0-b043-fcb1d0c08acf-5dc7/specs/
+ */
+.c-hp-hero-banner {
+    position: relative;
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    flex-flow: wrap;
+    background-position: left center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: #F7F7F7;
+    height: 385px;
+    width: 100%;
+    // margin-left: calc(50% - 50vw);
+    color: var(--sparky-theme-color-body-foreground);
+
+    @media all and (min-width: $sparky-bp-xl) {
+        height: 400px;
+    }
+}
+
+/**
+ * Hero banner container
+ * Internal container for banner image, title and description
+ */
+.c-hp-hero-banner__container {
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    flex-flow: wrap;
+    height: 100%;
+    width: 100%;
+    max-width: 1240px;
+    margin: 0 auto;
+}
+
+/**
+ * Hero banner text block
+ * Internal container for title and description
+ */
+.c-hp-hero-banner__textblock {
+    position: absolute;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    // right: 5%;
+    top: 4.159%;
+    max-width: 256px;
+    -webkit-box-align: center;
+    align-items: center;
+    text-align: center;
+    @media all and (min-width: $sparky-bp-md){
+        max-width: 267px;
+        right: auto;
+        -webkit-box-align: center;
+        align-items: center;
+        text-align: center;
+        top:auto;
+    }
+    @media all and (min-width: $sparky-bp-lg) {
+        max-width: 286px;
+
+    }
+}
+
+/**
+ * Hero banner text description
+ * Styling for the text description
+ */
+.c-hp-hero-banner__textblock__desc {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 1;
+}
+
+/**
+ * Hero banner theme inversion
+ */
+.c-hp-hero-banner--inverted {
+    color: var(--sparky-theme-color-body-foreground-inverted);
+}
+
+.sparky-hp-hero-button{
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+}
+.titleSpace, .descSpace, .tncSpace {
+    margin-bottom: 10px;
+}
+
+.descSpace{
+    font-family: var(--sparky-font-family-primary) !important;
+    font-weight: var(--sparky-font-weight-regular) !important;
+    font-size: var(--sparky-font-size-16) !important;
+    line-height: var(--sparky-line-height-xxxxl) !important;
+    letter-spacing: normal !important;
+    text-transform: none !important;
+}
+
+.tncSpace{
+    font-family: var(--sparky-font-family-primary) !important;
+    font-size: var(--sparky-font-size-12) !important;
+    font-weight: var(--sparky-font-weight-regular) !important;
+    letter-spacing: normal !important;
+    line-height: var(--sparky-line-height-xl) !important;
+    text-transform: none !important;
+}
