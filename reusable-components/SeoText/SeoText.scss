@@ -1,0 +1,79 @@
+@import '../../design-tokens/component.scss';
+
+
+/**
+ * Link Button
+ * 1) A button that is visually styled like a text link
+ */
+ .sparky-c-button--link {
+    @include textLink();
+    line-height: 1;
+    padding: 0;
+    border: 0;
+    border-radius: 0;
+    text-align: left;
+    background-color: transparent;
+    font-size: var(--sparky-font-size-14) !important;
+    line-height: var(--sparky-line-height-xxxl) !important;
+    &:hover,
+    &:focus {
+      background-color: transparent;
+    }
+
+    /**
+     * Inverted link button
+     */
+    &.sparky-c-button--inverted {
+      @include TextLinkInverted();
+    }
+
+    &:disabled {
+      text-decoration: none;
+    }
+  }
+
+
+.mobile-size-hrvtXc6alOpHtPvDkU .sparky-c-sparky-text-wrapper, .desktop-size-hrvtXc6alOpHtPvDkU .sparky-c-sparky-text-wrapper {
+    font-size:14px;
+    font-family: 'Euclid Circular B';
+    margin-bottom:16px;
+    padding-left:18px;
+    padding-right:13px;
+     background-color: transparent;
+
+    &:hover,
+    &:focus {
+      background-color: transparent;
+    }
+
+    /**
+     * Inverted link button
+     */
+    &.sparky-c-button--inverted {
+      @include TextLinkInverted();
+    }
+
+    &:disabled {
+      text-decoration: none;
+    }
+}
+@media (min-width: 469px) {
+    div.mobile-size-hrvtXc6alOpHtPvDkU {
+        display: none;
+    }
+    .sparky-c-button--link {
+        @include textLink();
+        margin: 0 13px 0 18px;
+      }
+}
+
+@media (max-width: 468px) {
+     div.desktop-size-hrvtXc6alOpHtPvDkU {
+        display: none;
+    }
+
+    .sparky-c-button--link {
+        @include textLink();
+        margin: 0 13px 0 18px;
+      }
+}

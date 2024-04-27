@@ -1,0 +1,166 @@
+@import '../../../src/design-tokens/component.scss';
+
+/*------------------------------------*\
+    #STORE SEARCH DRAWER
+\*------------------------------------*/
+
+/**
+ * Drawer header spacing
+ */
+ .sparky-c-drawer__header {
+   padding: calc(var(--sparky-size-base-unit) * 3.2);
+   color: var(--sparky-color-neutral-900);
+ }
+
+/**
+ * removes margin and padding from the body
+ */
+
+.c-store-search-drawer__body {
+  margin: 0;
+  padding: 0;
+}
+
+/**
+ * Alert and View All group layout
+ */
+
+.c-store-search-drawer__alert-group {
+  display: flex;
+  color: var(--sparky-color-neutral-900);
+  flex-direction: column;
+  align-items: center;
+  margin-right: calc(var(--sparky-size-base-unit) * 2);
+    margin-left: calc(var(--sparky-size-base-unit) * 2);
+}
+
+/**
+ * Settting the border style and space around the border
+ */
+.c-store-search-drawer__search {
+  padding: calc(var(--sparky-size-base-unit) * 2);
+  margin-bottom: size(2);
+  border-bottom-style: solid;
+  border-bottom-width: var(--sparky-theme-border-width);
+  border-bottom-color: var(--sparky-theme-color-neutral-subtle-border);
+  position: relative;
+
+  input {
+    background-color: var(sparky-color-neutral-50);
+  }
+  .sparky-c-text-input.sparky-c-text-field__input {
+    background-color: var(sparky-color-neutral-50);
+  }
+  .sparky-c-text-field__label {
+    color: var(--sparky-color-neutral-600);
+  }
+
+  .sparky-c-text-field__input-within .sparky-c-button {
+    border: none;
+    fill: var(--sparky-color-neutral-900);
+    // fill: var(--sparky-theme-color-text-link-secondary);
+    color: var(--sparky-color-neutral-900);
+    // color: var(--sparky-theme-color-text-link-secondary);
+    padding: 0;
+    width: calc(var(--sparky-size-base-unit) * 2.25);
+    height: calc(var(--sparky-size-base-unit) * 2.25);
+  }
+}
+
+/**
+ * Set the space around the store listing section
+ */
+.c-store-search-drawer__location {
+  color: var(--sparky-theme-color-text-link-secondary);
+}
+
+/**
+ * Set the space around the store listing section
+ */
+.c-store-search-drawer__listing {
+  padding: 0 0 size(2) size(2);
+
+  /**
+   * Overwrite the list items padding and margin.
+   */
+  .sparky-c-list__item {
+    padding-bottom: size(2);
+    margin-bottom: size(2);
+  }
+}
+
+/**
+ * Setting the padding and background color for the close button
+ */
+.sparky-c-drawer__header .sparky-c-drawer__close-button {
+  padding: size(1);
+  background: var(--sparky-color-neutral-50);
+}
+
+.sparky-c-text-input.sparky-c-text-field__input {
+  height: 40px;
+  margin-bottom: 0;
+
+}
+
+.sparky-c-text-field__input-within {
+  right: 2%;
+  cursor: pointer;
+}
+
+.sparky-c-text-field__input-within .sparky-c-button {
+  border: none;
+}
+
+.c-sparky-radio-button-align {
+  padding-bottom: size(2);
+  border-bottom-style: solid;
+  border-bottom-width: var(--sparky-theme-border-width);
+  border-bottom-color: var(--sparky-theme-color-neutral-subtle-border);
+}
+.c-sparky-radio-button-align .sparky-c-radio-field__item-body {
+  align-items: center;
+}
+
+/**********
+ * Sparky/<style> overrides
+ **********/
+
+ /**
+ * Remove margin-bottom in between drawer top hr and radio list
+ */
+.sparky-c-legend {
+  margin-bottom: initial !important;
+}
+
+.sparky-c-button--link {
+  margin: initial;
+}
+
+.sparky-c-alert .sparky-c-text-passage {
+  padding-right: initial;
+}
+
+.c-store-search-drawer-text-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.c-store-search-drawer__search-button {
+  border: none;
+  color: #131313;
+  position: absolute;
+  top: 21%;
+  right: 4.5%;
+  z-index: 2;
+  padding: 11px;
+}
+
+.c-store-search-drawer__search-button .sparky-c-icon.sparky-c-icon--search.sparky-c-icon--sm.sparky-c-button__icon {
+  pointer-events: none;
+}
+.c-sparky-radio-button-align div.sparky-c-radio-field__item-before {
+    width: -webkit-fill-available;
+    cursor: pointer;
+}
