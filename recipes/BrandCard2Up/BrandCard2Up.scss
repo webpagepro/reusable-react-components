@@ -1,0 +1,157 @@
+@import "../../design-tokens/utilities/Utilities.scss";
+
+.sparky-c-brand-card-2up-grid {
+    row-gap: calc(var(--sparky-size-base-unit) * 2);
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+    margin-top: calc(var(--sparky-size-base-unit) * 2);
+    padding: calc(var(--sparky-size-base-unit) * 1.5) !important;
+
+    // Sparky grid item spacing overrides
+    >.sparky-l-grid__item {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+    >.sparky-l-grid__item:first-child {
+        padding-left: 0 !important;
+    }
+
+    >.sparky-l-grid__item:nth-child(2) {
+        padding-right: 0 !important;
+    }
+
+    @media all and (min-width: $sparky-bp-md) {
+        margin-left: 0;
+        margin-right: 0;
+        row-gap: var(--sparky-size-base-unit);
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+}
+
+a.sparky-c-brand-card-2up__link {
+    color: inherit;
+    text-decoration: none;
+}
+
+.sparky-c-brand-card-2up__card {
+    background-color: inherit;
+    text-align: center;
+    max-height: 328px;
+    overflow: initial;
+
+    // Youtube video height override
+    .video_wrapper {
+        padding-bottom: 44% !important;
+
+        .sparky_iframe {
+            max-height: 158px;
+            border-radius: 0 0 var(--sparky-border-radius-xl) var(--sparky-border-radius-xl);
+
+            @media all and (min-width: $sparky-bp-md) {
+                max-height: initial;
+            }
+        }
+
+        @media all and (min-width: $sparky-bp-md) {
+            padding-bottom: 57.83% !important;
+            max-height: 340px;
+        }
+    }
+
+    // Sparky Button margin override
+    .sparky-c-button {
+        margin-top: 16px;
+
+        @media all and (min-width: $sparky-bp-md) {
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+
+    @media all and (min-width: $sparky-bp-md) {
+        max-height: 500px;
+    }
+}
+
+.sparky-c-brand-card-2up__header {
+    .sparky-c-brand-card-2up__body-title {
+        margin-bottom: var(--sparky-size-base-unit);
+    }
+}
+
+.sparky-c-brand-card-2up__header-card--content-flipped {
+    display: flex;
+    flex-direction: column-reverse;
+
+    .sparky-c-brand-card-2up__header-content {
+        border-radius: 0 0 var(--sparky-border-radius-xl) var(--sparky-border-radius-xl);
+    }
+
+    .sparky-c-brand-card-2up__image {
+        border-radius: var(--sparky-border-radius-xl) var(--sparky-border-radius-xl) 0 0;
+        max-height: 194px;
+
+        @media all and (min-width: $sparky-bp-md) {
+            max-height: 340px;
+        }
+    }
+
+    .video_wrapper {
+        padding-bottom: 44% !important;
+
+        .sparky_iframe {
+            max-height: 158px;
+            border-radius: var(--sparky-border-radius-xl) var(--sparky-border-radius-xl) 0 0;
+
+            @media all and (min-width: $sparky-bp-md) {
+                max-height: initial;
+            }
+        }
+
+        @media all and (min-width: $sparky-bp-md) {
+            padding-bottom: 57.83% !important;
+            max-height: 340px;
+        }
+    }
+}
+
+.sparky-c-brand-card-2up__header-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: var(--sparky-color-neutral-50);
+    padding: calc(var(--sparky-size-base-unit) * 2);
+    border-radius: var(--sparky-border-radius-xl) var(--sparky-border-radius-xl) 0 0;
+
+    @media all and (min-width: $sparky-bp-md) {}
+}
+
+.sparky-c-brand-card-2up__header-content--inverted {
+    color: var(--sparky-color-neutral-white);
+}
+
+.sparky-c-brand-card-2up__header {
+    background-color: inherit;
+}
+
+.sparky-c-brand-card-2up__image {
+    max-height: 194px;
+    border-radius: 0 0 var(--sparky-border-radius-xl) var(--sparky-border-radius-xl);
+
+    @media all and (min-width: $sparky-bp-md) {
+        max-height: 340px;
+    }
+}
+
+.sparky-c-brand-card-2up__footer {
+    margin: 0;
+    background-color: inherit;
+}
+
+.sparky-c-brand-card-2up__video .video_wrapper {
+    @media all and (min-width: $sparky-bp-md) {
+        padding-bottom: 55.7% !important;
+    }
+}

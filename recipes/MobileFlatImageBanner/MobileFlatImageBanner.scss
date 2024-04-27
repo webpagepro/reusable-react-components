@@ -1,0 +1,127 @@
+@import '../../design-tokens/component.scss';
+
+/**
+ * A full page width banner for Treats Member Page
+ * design - https://xd.adobe.com/view/192e06fd-dec9-4cad-aa07-b8ca4a5c7efc-4c7d/specs/
+ */
+.c-treats-banner {
+    position: relative;
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    flex-flow: wrap;
+    background-position: left center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    /* background-color: #F7F7F7;*/
+    margin-bottom: 32px;
+    color: var(--sparky-theme-color-body-foreground);
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+
+    @media all and (min-width: $sparky-bp-md) {
+        width: auto;
+        margin: auto;
+    }
+}
+
+/**
+ * Treats banner container
+ * Internal container for banner image, title and description
+ */
+.c-treats-banner__container {
+    display: flex;
+    -webkit-box-pack: left;
+    justify-content: left;
+    -webkit-box-align: left;
+    align-items: left;
+    flex-flow: wrap;
+    width: 100%;
+    max-width: 1240px;
+    margin: 0 auto;
+}
+
+/**
+ * Treats banner text block
+ * Internal container for title and description
+ */
+.c-treats-banner__textblock {
+    position: absolute;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    margin-top: 61px;
+    padding-left: 30px;
+    width: 100%;
+    -webkit-box-align: left;
+    align-items: left;
+    text-align: left;
+
+
+    @media all and (min-width: $sparky-bp-md) {
+        right: auto;
+        -webkit-box-align: left;
+        align-items: left;
+        text-align: left;
+        top: 0;
+    }
+}
+
+/**
+ * Treats banner text description
+ * Styling for the text description
+ */
+.c-treats-banner__textblock__desc {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 1;
+}
+
+/**
+ * Treats banner theme inversion
+ */
+.c-treats-banner--inverted {
+    color: var(--sparky-theme-color-body-foreground-inverted);
+}
+
+.titleSpace {
+    margin-bottom: 10px;
+}
+
+div.sparky-c-text-passage .c-treats-banner__textblock {
+    padding: 0 0 0 30px !important;
+}
+
+h1.c-treats-banner-header {
+    font-size: var(--sparky-font-size-32);
+}
+
+h2.c-treats-banner-subtitle {
+    font-size: var(--sparky-font-size-24);
+}
+
+/* TABLET SETTINGS */
+@media(min-width: 768px) and (max-width: 1040px) {
+    .c-treats-banner__textblock {
+        margin-top: 31px !important;
+    }
+
+    h1.c-treats-banner-header {
+        font-size: var(--sparky-font-size-28);
+    }
+
+    h2.c-treats-banner-subtitle {
+        font-size: var(--sparky-font-size-20);
+    }
+}
+
+@media all and (min-width: $sparky-bp-md) {
+    .c-treats-banner {
+        margin-bottom: 64px;
+    }
+
+}

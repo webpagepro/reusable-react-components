@@ -1,0 +1,150 @@
+@import "../../design-tokens/component.scss";
+
+/**
+ * A landing page banner (LP Banner)
+ * design -https://xd.adobe.com/view/08ae2319-6a78-443f-97f1-4762e30fa00d-5dfd/screen/dadf317f-5c0c-4e30-a8eb-19a295854696/
+ */
+.c-landing-banner {
+    position: relative;
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    flex-flow: wrap;
+    background-position: left center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    /* background-color: #F7F7F7;*/
+    margin: 0 auto 32px auto;
+    color: var(--sparky-theme-color-body-foreground);
+    // width: 100vw;
+    // margin-left: calc(50% - 50vw);
+
+    @media all and (min-width: $sparky-bp-md) {
+        width: auto;
+        margin: auto;
+    }
+}
+
+/**
+ * LP banner container
+ * Internal container for banner image, title and description
+ */
+.c-landing-banner__container {
+    display: flex;
+    -webkit-box-pack: left;
+    justify-content: left;
+    -webkit-box-align: left;
+    align-items: center; //todo: make left default, override in class addition if textCentered is in data
+    flex-flow: wrap;
+    width: 100%;
+    max-width: 1240px;
+    margin: 0 auto;
+
+    .sparky-c-picture__image {
+        border-radius: 12px;
+    }
+}
+
+/**
+ * LP banner text block
+ * Internal container for title and description
+ */
+.sparky-c-text-passage--align-left {
+    .sparky-c-text-passage__inner {
+        margin: 0 auto;
+    }
+
+    @media all and (min-width: $sparky-bp-md) {
+        left: 32px;
+        top: 15px !important;
+
+        .sparky-c-text-passage__inner {
+            margin: initial;
+        }
+    }
+}
+.c-landing-banner__textblock {
+    position: absolute;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    -webkit-box-align: left;
+    align-items: left;
+    text-align: left;
+
+    @media all and (min-width: $sparky-bp-md) {
+        right: auto;
+        -webkit-box-align: left;
+        align-items: left;
+        text-align: left;
+        top: 0;
+    }
+}
+
+/**
+ * LP banner text description
+ * Styling for the text description
+ */
+.c-landing-banner__textblock__desc {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 1;
+}
+
+/**
+ * LP banner theme inversion
+ */
+.c-landing-banner--inverted {
+    color: var(--sparky-theme-color-body-foreground-inverted);
+}
+
+.titleSpace {
+    margin-bottom: 10px;
+}
+
+// div.sparky-c-text-passage .c-landing-banner__textblock {
+//     padding: 0 0 0 30px !important;
+// }
+
+h1.c-landing-banner-header {
+    font-size: var(--sparky-font-size-28);
+    line-height: var(--sparky-font-size-36);
+    margin-bottom: 8px;
+}
+
+h2.c-landing-banner-subtitle {
+    font-size: var(--sparky-font-size-20);
+    line-height: var(--sparky-font-size-28);
+}
+
+/* TABLET SETTINGS */
+@media (min-width: 768px) and (max-width: 1040px) {
+    .c-landing-banner__textblock {
+        margin-top: 31px !important;
+    }
+}
+
+@media all and (min-width: $sparky-bp-md) {
+    .c-landing-banner {
+        margin-bottom: 64px;
+    }
+
+    .c-landing-banner__textblock {
+        margin-top: 61px !important;
+    }
+    
+    h1.c-landing-banner-header {
+        font-size: var(--sparky-font-size-32);
+        line-height: var(--sparky-font-size-40);
+    }
+
+    h2.c-landing-banner-subtitle {
+        font-size: var(--sparky-font-size-24);
+        line-height: var(--sparky-font-size-32);
+    }
+}

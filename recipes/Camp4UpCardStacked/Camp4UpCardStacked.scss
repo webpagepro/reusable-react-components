@@ -1,0 +1,84 @@
+@import "../../design-tokens/utilities/Utilities.scss";
+
+.sparky-c-campaign-card-4up-grid {
+    row-gap: var(--sparky-size-base-unit);
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+    margin-top:0;
+    padding: calc(var(--sparky-size-base-unit) * 1.5) !important;
+
+    @media all and (min-width: $sparky-bp-md) {
+        margin-left: 0;
+        margin-right: 0;
+        row-gap: var(--sparky-size-base-unit);
+        padding: calc(var(--sparky-size-base-unit) * 2) !important;
+    }
+}
+
+a.sparky-c-campaign-card-4up__link {
+    color: inherit;
+    text-decoration: none;
+}
+
+.sparky-c-campaign-card-4up__card {
+    background-color: inherit;
+
+    text-align: center;
+}
+
+.sparky-c-campaign-card-4up__header {
+    margin-bottom: var(--sparky-size-base-unit);
+}
+
+.sparky-c-campaign-card-4up__header-content {
+    height: calc(var(--sparky-size-base-unit) * 10);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: var(--sparky-color-brand-red-700);
+    padding: calc(var(--sparky-size-base-unit) * 2);
+    border-radius: 0 0 12px 12px;
+
+    @media all and (min-width: $sparky-bp-md) {
+        height: calc(var(--sparky-size-base-unit) * 11);
+    }
+}
+
+.c-preheader-bottom {
+    flex-direction: column-reverse;
+}
+
+.sparky-c-campaign-card-4up__header-content--inverted {
+    color: var(--sparky-color-neutral-white);
+}
+
+.sparky-c-campaign-card-4up__header {
+    background-color: inherit;
+}
+
+.sparky-c-campaign-card-4up__image {
+    border-radius: var(--sparky-border-radius-xl);
+}
+
+.sparky-c-campaign-card-4up__footer {
+    margin: 0;
+    background-color: inherit;
+
+    &-body {
+        margin-bottom: calc(var(--sparky-size-base-unit) / 2);
+    }
+
+    &-terms {
+        font-size: calc(var(--sparky-size-base-unit) * 1.75);
+    }
+}
+
+.sparky-c-sparky-legacy-wrapper--front-end-web {
+    overflow-x: initial;
+  }
+
+
+  /*** TODO - add invertable font colors ***/
+  .sparky-c-campaign-card-4up__card--inverted {
+    color: #fff !important;
+}
