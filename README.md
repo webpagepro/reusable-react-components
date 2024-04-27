@@ -1,2 +1,2 @@
 # React Resusable Components and Recipes
-## Extended from Petsmrt's Storybook Design System
+## Extended from Petsmart's Storybook Design System
