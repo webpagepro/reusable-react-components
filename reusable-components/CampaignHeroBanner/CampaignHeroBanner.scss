@@ -107,10 +107,6 @@
         }
     }
 }
-/*
-.string-new-line {
-    width: 100vw;
-}*/
 
 .campaign-hero-banner:nth-child(2) {
     flex-grow: 1;
@@ -170,7 +166,6 @@
     align-items: center;
     text-align: center;
     padding-top: 16px;
-    // padding-bottom: 16px;
 
 
     @media all and (min-width: $sparky-bp-md) {
